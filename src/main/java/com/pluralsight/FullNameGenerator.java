@@ -14,8 +14,10 @@ public class FullNameGenerator {
         System.out.println("Middle name: ");
         String middleName;
         middleName = myScanner.nextLine();
+        String middleInitial = "";
         if(!middleName.isEmpty()){
-            middleName = middleName.toUpperCase().charAt(0) +  ". ";
+            middleName = middleName.trim();
+            middleInitial = middleName.charAt(0) +  ". ";
         }
         String lastName = getLastName(myScanner);
         lastName = lastName.trim();
@@ -27,7 +29,7 @@ public class FullNameGenerator {
             suffix = ", " + suffix;
         }
 
-        System.out.println("Full name: " + firstName + " " + middleName + lastName + suffix);
+        System.out.println("Full name: " + firstName + " " + middleInitial + lastName + suffix);
 
     }
     public static String getFirstName(Scanner scanner){

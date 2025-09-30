@@ -17,7 +17,7 @@ public class FullNameGenerator {
         String middleInitial = "";
         if(!middleName.isEmpty()){
             middleName = middleName.trim();
-            middleInitial = middleName.charAt(0) +  ". ";
+            middleInitial = middleName.substring(0, 1).toUpperCase() +  ". ";
         }
         String lastName = getLastName(myScanner);
         lastName = lastName.trim();
